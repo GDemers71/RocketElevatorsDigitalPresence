@@ -155,34 +155,34 @@
 									Add .external for an external link!
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#home">
-											Home
+									<li class="active" id="home-nav"><!-- HOME -->
+										<a href="#slidetop">
+											HOME
 										</a>
 									</li>
-									<li><!-- SERVICES -->
+									<li id="services-nav"><!-- SERVICES -->
 										<a href="#services">
-											Services
+											SERVICES
 										</a>
 									</li>
-									<li><!-- WORK -->
-										<a href="#work">
-											Portfolio
+									<li id="portfolio-nav"><!-- WORK -->
+										<a href="#portfolio">
+											PORTFOLIO
 										</a>
 									</li>
-									<li><!-- NEWS -->
+									<li id="new-nav"><!-- NEWS -->
 										<a href="#news">
-											News
+											NEWS
 										</a>
 									</li>
-									<li><!-- OVERVIEW -->
-										<a href="#overview">
-											Clients
-										</a>
-									</li>
-									<li><!-- CLIENTS -->
+									<li id="clients-nav"><!-- OVERVIEW -->
 										<a href="#clients">
-											Contact
+											CLIENTS
+										</a>
+									</li>
+									<li id="contact-nav"><!-- CLIENTS -->
+										<a href="#contact">
+											CCONTACT
 										</a>
 									</li>
 								</ul>
@@ -228,8 +228,8 @@
 						data-height="750"
 						data-height="800"
 				-->
-				<div class="fullwidthbanner" data-height="800" data-shadow="0" data-navigationStyle="preview2">
-					<ul class="hide">
+					<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+						<ul class="hide">
 					
 						<!-- SLIDE SLOGAN  -->
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Who we are">
@@ -446,7 +446,7 @@
 
 							<h3 class="mt-10">Awards Winning compagny</h3>
 							<p>Rocket Elevator always know how to distingush is product on the market using innovation, quality and commitement to our clients projects </p>
-							<a href="#" class="btn btn-default">SEE FOR YOURSELF</a>
+							<a href="portfolio" class="btn btn-default">SEE FOR YOURSELF</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -458,14 +458,14 @@
 							</a>
 							<h3 class="mt-10">residential related inquiries </h3>
 							<p>Our dedicated team will lead you throu your project, from the quote to the frist time using your elevator</p>
-							<a href="#" class="btn btn-default">START NOW</a>
+							<a href="residential.html" class="btn btn-default">START NOW</a>
 						</div>
 
 						<div class="col-sm-4">
 							<img class="img-fluid" src="assets/images/_RocketElevators/ELEV_WORKER.jpeg" alt="img" />
 							<h3 class="mt-10">Corporates related inquiries</h3>
 							<p>For more informations or submit a quote for coporated buildings, Rocket Elevator is the solution</p>
-							<a href="#" class="btn btn-default">START NOW</a>
+							<a href="commercial.html" class="btn btn-default">START NOW</a>
 						</div>
 
 					</div>
@@ -484,7 +484,7 @@
 				<div class="container">
 
 					<div class="text-center">
-						<h2 class="fs-40 fw-300">Elevating the standard since 1976</h2>
+						<h2 class="fs-40 fw-300">Elevating the business standard since 1976</h2>
 						<a class="btn btn-default btn-lg" href="#">REQUEST A QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-warning btn-lg" href="#">CONTACT US <i class="fa fa-angle-right"></i></a>
@@ -498,7 +498,7 @@
 
 
 			<!-- PORTFOLIO -->
-			<section id="work">
+			<section id="portfolio">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -787,15 +787,15 @@
 											<span class="overlay dark-5"></span>
 											<span class="inner">
 
-												<!-- lightbox -->
+												
 												<a class="ico-rounded lightbox" href="demo_files/images/thematics/construction/w8-min.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
-												<!-- details -->
-												<a class="ico-rounded" href="portfolio-single-slider.html">
+											
+												<!-- <a class="ico-rounded" href="portfolio-single-slider.html">
 													<span class="glyphicon glyphicon-option-horizontal fs-20"></span>
-												</a>
+												</a> -->
 
 											</span>
 										</span>
@@ -826,40 +826,40 @@
 
 
 
-			<!-- Testimonials -->
-			<section class="section-xs dark">
-				<div class="container">
+<!-- Testimonials -->
+<section class="team">
+	<div class="container">
 
-					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-						<div class="testimonial">
-							<figure>
-								<img class="rounded" src="demo_files/images/people/300x300/11-min.jpg" alt="" />
-							</figure>
-							<div class="testimonial-content p-0">
-								<p class="lead">Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero.</p>
-								<cite>
-									Joana Doe
-									<span>Company Ltd.</span>
-								</cite>
-							</div>
-						</div>
-						<div class="testimonial">
-							<figure>
-								<img class="rounded" src="demo_files/images/people/300x300/12-min.jpg" alt="" />
-							</figure>
-							<div class="testimonial-content p-0">
-								<p class="lead">Quod necessitatibus quis expedita harum provident eos obcaecati id culpa.</p>
-								<cite>
-									Melissa Doe
-									<span>Company Ltd.</span>
-								</cite>
-							</div>
-						</div>
-					</div>
-
+		<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+			<div class="testimonial" id="ceo">
+				<figure>
+					<img class="rounded" src="assets/images/_RocketElevators/CEO.JPG" alt="" />
+				</figure>
+				<div class="testimonial-content p-0">
+					<p class="lead">The incredible Women and CEO behing Rocket Elevators.</p>
+					<cite>
+						Marie-Ève Goupil
+						<span>Company Ltd.</span>
+					</cite>
 				</div>
-			</section>
-			<!-- /Testimonials -->
+			</div>
+			<div class="testimonial" id="employee">
+				<figure>
+					<img class="rounded" src="assets/images/_RocketElevators/employee-of-the-month.JPG" alt="" />
+				</figure>
+				<div class="testimonial-content p-0">
+					<p class="lead">The indisputable employe of the month.</p>
+					<cite>
+						Gabriel Demers
+						<span>Company Ltd.</span>
+					</cite>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- /Testimonials -->
 
 
 
@@ -894,161 +894,124 @@
 					-->
 					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/24-min.jpg" alt="">
+							<a href="https://elevatortoday.com/2014/05/02/hyundai-elevator-called-foot/">
+								<img class="img-fluid" src="assets/images/_RocketElevators/Touchless_footbutton.png" alt="">
 							</a>
 
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20"><a href="https://elevatortoday.com/2014/05/02/hyundai-elevator-called-foot/">Touchless footbutton</a></h4>
+							<p class="text-left"> see our new touchless Footbutton for our Elevator product</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
+									21th Feb 2021
 								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
+								<!-- <li>
+									<a href="https://elevatortoday.com/2014/05/02/hyundai-elevator-called-foot/">
 										<i class="fa fa-comments"></i> 
 										3
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/17-min.jpg" alt="">
+							<a href="https://group.schindler.com/en/media/press-releases/pioneering-installation-robot-for-the-first-time-deployed-in-asia-pacific.html">
+								<img class="img-fluid" src="assets/images/_RocketElevators/installation_robot.png" alt="">
 							</a>
 
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20"><a href="https://group.schindler.com/en/media/press-releases/pioneering-installation-robot-for-the-first-time-deployed-in-asia-pacific.html">Pioneering installation Robot</a></h4>
+							<p class="text-left">Rocket Elevator’s Robotic Installation System for Elevators, the world’s first self-climbing, autonomous robotic system able to conduct installation work in an elevator shaft.</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
+									15th May 2022
 								</li>
-								<li>
+								<!-- <li>
 									<a href="blog-single-default.html#comments">
 										<i class="fa fa-comments"></i> 
 										3
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/30-min.jpg" alt="">
+							<a href="https://group.schindler.com/en/media/press-releases/schindler-elevates-new-capital-city-in-egypt.html">
+								<img class="img-fluid" src="assets/images/_RocketElevators/Egypt_construction.PNG" alt="">
 							</a>
 
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20"><a href="https://group.schindler.com/en/media/press-releases/schindler-elevates-new-capital-city-in-egypt.html">Rocket Elevators elevates Egypt’s new capital city</a></h4>
+							<p class="text-left">Rocket Elevators has been selected to deliver and install a total of 129 high-rise elevators to six office towers currently under construction in Egypt’s New Administrative Capital</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
+									10th Dec 2021
 								</li>
-								<li>
+								<!-- <li>
 									<a href="blog-single-default.html#comments">
 										<i class="fa fa-comments"></i> 
 										3
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/26-min.jpg" alt="">
+							<a href="https://www.hyundaielevator.co.kr/en/company/promotion/news?id=905&keyword=&p=2&total=70&isSearch=false">
+								<img class="img-fluid" src="assets/images/_RocketElevators/Six_Elevator.png" alt="">
 							</a>
 
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20"><a href="https://www.hyundaielevator.co.kr/en/company/promotion/news?id=905&keyword=&p=2&total=70&isSearch=false">Introduces Six New Products in the 2022 N:EX Collection</a></h4>
+							<p class="text-left">Rocket Elevators (Marie-Ève Goupil, CEO) announced the newest six products in its 2022 N:EX lineup, its most popular model</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
+									8th Feb 2022
 								</li>
-								<li>
+								<!-- <li>
 									<a href="blog-single-default.html#comments">
 										<i class="fa fa-comments"></i> 
 										3
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/18-min.jpg" alt="">
+							<a href="https://www.hyundaielevator.co.kr/en/company/promotion/news?id=805&keyword=&p=4&total=70&isSearch=false">
+								<img class="img-fluid" src="assets/images/_RocketElevators/Shanghai_smart_campus.png" alt="">
 							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20"><a href="https://www.hyundaielevator.co.kr/en/company/promotion/news?id=805&keyword=&p=4&total=70&isSearch=false"> Rocket Elevators Completes Smart Campus in Shanghai, China</a></h4>
+							<p class="text-left">Rocket Elevator’s Shanghai Subsidiary began construction after receiving approval for the construction of production lines for facilities such as smart factories last November</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
+									18th Jan 2022
 								</li>
-								<li>
+								<!-- <li>
 									<a href="blog-single-default.html#comments">
 										<i class="fa fa-comments"></i> 
 										3
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/34-min.jpg" alt="">
+							<a href="https://www.hyundaielevator.co.kr/en/company/promotion/news?id=635&keyword=&p=8&total=70&isSearch=false">
+								<img class="img-fluid" src="assets/images/_RocketElevators/Vivaldi_elevator.png" alt="">
 							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20"><a href="https://www.hyundaielevator.co.kr/en/company/promotion/news?id=635&keyword=&p=8&total=70&isSearch=false">Rocket Elevators launches new low and medium speed product line ‘VIVALDI’</a></h4>
+							<p class="text-left">The new product designed with the themes of light and nature of the four seasons consists of 8 types: 4 types of Vivaldi including Spring Bloom, Summer Ray, Autumn Maple, and Winter Forest, and 4 types of Vivaldi Premium</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
+									2th June 2022
 								</li>
-								<li>
+								<!-- <li>
 									<a href="blog-single-default.html#comments">
 										<i class="fa fa-comments"></i> 
 										3
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/37-min.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/23-min.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
+						
 					</div>
 
 				</div>

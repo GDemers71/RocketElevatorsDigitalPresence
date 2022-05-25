@@ -247,7 +247,7 @@ section header.section-header {
 	.dark-2 h4, 
 	.dark-2 h5, 
 	.dark-2 h6 {
-		color: #fff;
+		color: rgb(255, 255, 255);
 	}
 
 	section.theme-color,
@@ -266,7 +266,7 @@ section header.section-header {
 	section.dark h4,
 	section.dark h5,
 	section.dark h6 {
-		color:#fff;
+		color:rgb(160, 4, 4);
 	}
 	section.section-xxs {
 		padding:15px 0;
@@ -287,7 +287,7 @@ section header.section-header {
 		padding:140px 0;
 	}
 	section.dark a {
-		color:#999;
+		color:rgb(153, 153, 153);
 	}
 	section.parallax {
 		border:0;

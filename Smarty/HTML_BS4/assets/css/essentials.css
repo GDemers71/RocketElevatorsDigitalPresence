@@ -1107,7 +1107,7 @@ section.dark .border-bottom-3 {
 	height: 1px;
 	position: absolute;
 	bottom: -6px;
-	border-bottom: 1px dotted #999;
+	border-bottom: 1px dotted rgb(6, 9, 195);
 }
 
 
