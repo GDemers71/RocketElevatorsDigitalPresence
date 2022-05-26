@@ -1101,7 +1101,7 @@
 
 					<header class="text-center mb-60">
 						<h2>Contact Us</h2>
-						<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+						<!-- <p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p> -->
 						<hr />
 					</header>
 
@@ -1165,11 +1165,11 @@
 
 									<div class="row">
 											<div class="col-md-4">
-												<label for="contact:name">Full Name *</label>
+												<label for="contact:name">Full Name*</label>
 												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:email">E-mail Address *</label>
+												<label for="contact:email">E-mail*</label>
 												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
 											</div>
 											<div class="col-md-4">
@@ -1178,8 +1178,19 @@
 											</div>
 									</div>
 									<div class="row">
+										<div class="col-md-6">
+											<label for="contact:name">Company_name*</label>
+											<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+										</div>
+										<div class="col-md-6">
+											<label for="contact:email">Project_name*</label>
+											<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+										</div>
+									</div>
+
+									<div class="row">
 											<div class="col-md-8">
-												<label for="contact:subject">Subject *</label>
+												<label for="contact:subject">Project_description*</label>
 												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
 											</div>
 											<div class="col-md-4">
@@ -1194,7 +1205,7 @@
 									</div>
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Message *</label>
+												<label for="contact:message">Message*</label>
 												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
 											</div>
 									</div>
@@ -1246,9 +1257,9 @@
 							<hr />
 
 							<p>
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 1165 Bd Lebourgneuf Suite 300, Québec, QC G2K 2C9</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">(418) 555-1234</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">nfo@codeboxx.biz</a></span>
 							</p>
 
 						</div>
@@ -1273,13 +1284,14 @@
 						<!-- col #1 -->
 						<div class="col-md-8">
 
-							<h3 class="letter-spacing-1">WHY US?</h3>
+							<h3 class="letter-spacing-1">WHy US?</h3>
 
 							<!-- Small Description -->
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
+							<p>We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have
+								
+								
 							</p>
-							<h2>(800) 123-4567</h2>
+							<h2>(418) 555-1234</h2>
 						</div>
 						<!-- /col #1 -->
 
@@ -1288,7 +1300,7 @@
 							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
 
 							<!-- Newsletter Form -->
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+							<p>Subscribe to Our Newsletter to get Important News & Offers about Rocket Elevators</p>
 
 							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
 								<div class="input-group">
