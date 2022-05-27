@@ -26,7 +26,7 @@
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -51,48 +51,6 @@
 		data-background="assets/images/_smarty/boxed_background/1.jpg"
 	-->
 	<body class="smoothscroll enable-animation">
-
-		<!-- SLIDE TOP -->
-		<div id="slidetop">
-
-			<div class="container">
-				
-				<div class="row">
-
-					<div class="col-md-4">
-						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
-						<ul class="list-unstyled">
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
-						</ul>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
-						<ul class="list-unstyled">
-							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
-							<li><b>Phone:</b> 1-800-565-2390</li>
-							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
-						</ul>
-					</div>
-
-				</div>
-
-			</div>
-
-			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
-
-		</div>
-		<!-- /SLIDE TOP -->
-
 
 		<!-- wrapper -->
 		<div id="wrapper">
@@ -145,7 +103,7 @@
 							AVAILABLE CLASSES:
 							submenu-dark = dark sub menu
 						-->
-						<div class="navbar-collapse collapse float-left nav-main-collapse submenu-dark">
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 							<nav class="nav-main">
 
 								<!-- 
@@ -156,7 +114,7 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active" id="home-nav"><!-- HOME -->
-										<a href="#slidetop">
+										<a href="#">
 											HOME
 										</a>
 									</li>
@@ -182,7 +140,7 @@
 									</li>
 									<li id="contact-nav"><!-- CLIENTS -->
 										<a href="#contact">
-											CCONTACT
+											CONTACT
 										</a>
 									</li>
 								</ul>
@@ -199,7 +157,7 @@
 
 
 			<!-- REVOLUTION SLIDER -->
-			<div class="slider fullwidthbanner-container roundedcorners">
+			<div id="home" class="slider fullwidthbanner-container roundedcorners">
 				<!--
 					Navigation Styles:
 					
@@ -232,7 +190,7 @@
 						<ul class="hide">
 					
 						<!-- SLIDE SLOGAN  -->
-						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Who we are">
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Who we are" data-delay="7000">
 							<!-- MAIN IMAGE -->
 							<img src="assets/images/_RocketElevators/Blue_Elevator.jpeg"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
@@ -281,7 +239,7 @@
 								data-endspeed="300"
 
 								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-warning btn-lg" href="#">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-danger btn-lg" href="services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 
 							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
@@ -297,12 +255,12 @@
 								data-endspeed="300"
 
 								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-warning btn-lg" href="#">REQUEST A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-danger btn-lg" href="#">REQUEST A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 
 						<!-- SLIDE RESIDENTIAL  -->
-						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Residential Services">
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Residential Services" data-delay="7000">
 							<!-- MAIN IMAGE -->
 							<img src="assets/images/_RocketElevators/dual_elevator_with_passenger.jpeg" alt="cover image"  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
 
@@ -352,12 +310,12 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-warning btn-lg" href="#">OUR RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-danger btn-lg" href="../HTML_BS4/residential.html">OUR RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 
 						<!-- SLIDE CORPORATE  -->
-						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Corporate services">
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Corporate services" data-delay="7000">
 							<!-- MAIN IMAGE -->
 							<img src="assets/images/_RocketElevators/Buisness_elevator.jpeg" alt="cover image"  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
 
@@ -407,7 +365,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-warning btn-lg" href="#">OUR CORPORATE SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-danger btn-lg" href="../HTML_BS4/commercial.html">OUR CORPORATE SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 					</ul>
@@ -421,9 +379,9 @@
 
 
 			<!-- BUTTON CALLOUT -->
-			<a href="#" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+			<a href="#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30">
-					Did Smarty convinced you? 
+					Rocket Elevators is <strong>YOUR</strong> solution. 
 					<strong>Contact us &raquo;</strong>
 				</span>
 			</a>
@@ -435,28 +393,31 @@
 			<section id="services">
 				<div class="container">
 
+					<div class="heading-title heading-dotted text-center">
+						<h2></h2>
+
 					<div class="row">
 						<div class="col-sm-4">
-							<a class="image-hover lightbox" href="https://vimeo.com/ondemand/buildingwithawareness/108669033" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-									<i class="fa fa-vimeo-square"><!-- video icon --></i>
+							<!-- <a class="image-hover lightbox" href="https://vimeo.com/ondemand/buildingwithawareness/108669033" data-plugin-options='{"type":"iframe"}'>
+								<span class="image-hover-icon image-hover-dark">image-hover-light | image-hover-dark -->
+									
 								</span>
 								<img class="img-fluid" src="assets/images/_RocketElevators/RED_ELEVATOR.jpeg" alt="img" />
 							</a>
 
 							<h3 class="mt-10">Awards Winning compagny</h3>
 							<p>Rocket Elevator always know how to distingush is product on the market using innovation, quality and commitement to our clients projects </p>
-							<a href="portfolio" class="btn btn-default">SEE FOR YOURSELF</a>
+							<a href="#portfolio" class="btn btn-default">SEE FOR YOURSELF</a>
 						</div>
 
 						<div class="col-sm-4">
-							<a class="image-hover lightbox" href="https://www.youtube.com/watch?v=ZhCyoDlltbo" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-									<i class="fa fa-youtube-square"><!-- video icon --></i>
+							<!-- <a class="image-hover lightbox" href="https://www.youtube.com/watch?v=ZhCyoDlltbo" data-plugin-options='{"type":"iframe"}'>
+								<span class="image-hover-icon image-hover-dark">image-hover-light | image-hover-dark -->
+									
 								</span>
 								<img class="img-fluid" src="assets/images/_RocketElevators/RESIDENTIAL_CLASSY_ELEV.jpeg" alt="img" />
 							</a>
-							<h3 class="mt-10">residential related inquiries </h3>
+							<h3 class="mt-10">Residential related inquiries </h3>
 							<p>Our dedicated team will lead you throu your project, from the quote to the frist time using your elevator</p>
 							<a href="residential.html" class="btn btn-default">START NOW</a>
 						</div>
@@ -485,9 +446,9 @@
 
 					<div class="text-center">
 						<h2 class="fs-40 fw-300">Elevating the business standard since 1976</h2>
-						<a class="btn btn-default btn-lg" href="#">REQUEST A QUOTE <i class="fa fa-angle-right"></i></a> 
+						<a class="btn btn-primary btn-lg" href="#">REQUEST A QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
-						<a class="btn btn-warning btn-lg" href="#">CONTACT US <i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-danger btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
 					</div>
 
 				</div>
@@ -500,9 +461,9 @@
 			<!-- PORTFOLIO -->
 			<section id="portfolio">
 				<div class="container">
-
-					<div class="heading-title heading-dotted text-center">
-						<h2>Featured Work</h2>
+					
+					<div class="heading-title heading-line-double text-center">
+						<h2>Portfolio</h2>
 					</div>
 
 					<div class="text-center">
@@ -552,7 +513,6 @@
 											<li><a href="#">Awards winning</a></li>
 										</ul>
 									</div>
-
 								</div>
 
 							</div><!-- /item -->
@@ -977,7 +937,7 @@
 		<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 			<div class="testimonial" id="ceo">
 				<figure>
-					<img class="rounded" src="assets/images/_RocketElevators/CEO.JPG" alt="" />
+					<img class="rounded"  src="assets/images/_RocketElevators/CEO.JPG" alt="" />
 				</figure>
 				<div class="testimonial-content p-0">
 					<p class="lead">The incredible Women and CEO behing Rocket Elevators.</p>
@@ -1013,7 +973,7 @@
 			<section id="news">
 				<div class="container">
 
-					<div class="heading-title heading-dotted text-center">
+					<div class="heading-title heading-line-double text-center">
 						<h2>Recent News</h2>
 					</div>
 
@@ -1167,68 +1127,68 @@
 			<section id="clients" class="alternate">
 				<div class="container">
 
-					<div class="heading-title heading-dotted text-center">
+					<div class="heading-title heading-line-double text-center">
 						<h2>Our Clients</h2>
 					</div>
 
 					<ul class="row clients-dotted list-inline">
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/samsung_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Steam_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Apple_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Amazon_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Nasa_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Microsoft_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Cisco_Logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Intel_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Allergan_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/benQ_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/acer_logo.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<!-- <a href="#"> -->
 								<img class="img-fluid" src="assets/images/_RocketElevators/Corsair_logo.png" alt="client" />
 					</ul>
 
@@ -1396,8 +1356,9 @@
 								h-550
 								h-600
 							-->
-							<div id="map2" class="h-400 grayscale"></div>
-
+							<div  class="h-400">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2729.407876058609!2d-71.29402718460433!3d46.83566007914103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb897d0e1cafe3f%3A0x9863b2d992c71670!2sCodeBoxx!5e0!3m2!1sen!2sca!4v1653670975583!5m2!1sen!2sca" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
 							<hr />
 
 							<p>
@@ -1428,7 +1389,7 @@
 						<!-- col #1 -->
 						<div class="col-md-8">
 
-							<h3 class="letter-spacing-1">WHy US?</h3>
+							<h3 class="letter-spacing-1">WHY US?</h3>
 
 							<!-- Small Description -->
 							<p>We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have
@@ -1502,8 +1463,6 @@
 
 		<script src="assets/js/scripts.js"></script>
 		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
