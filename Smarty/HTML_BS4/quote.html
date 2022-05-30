@@ -162,50 +162,53 @@
 				<p>Specify the building type</p>
 
 					
-					<label for="building_type">Choose a type:</label>
-					<select name="building_type" id="building_type">
-					  <option value="Residential">Residential</option>
-					  <option value="commercial">Comercial</option>
-					  <option value="corporate">corporate</option>
-					  <option value="hybrid">hybrid</option>
-					</select>
+				<div>
+					<label for="residential">
+						<input type="radio" name="building-type" id="residential">residential</label>
+					<label for="commercial">
+						<input type="radio" name="building-type" id="commercial">commercial</label>
+					<label for="corporate">
+						<input type="radio" name="building-type" id="corporate">corporate</label>
+					<label for="hybrid">
+						<input type="radio" name="building-type" id="hybrid">hybrid</label>
 					<br><br>
-					<div class="col-md-4">
-						<label for="number-of-apartments">The number of apartments in the building</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-apartments">
+					<div>
+						<label>The number of apartments in the building</label>
+						<input required type="text" id="number-of-apartments">
 					</div>
-					<div class="col-md-4">
-						<label for="number-of-floors">The number of floors contained in the building, excluding basements</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-floors">
+					<div>
+						<label>The number of floors contained in the building, excluding basements</label>
+						<input required type="text" id="number-of-floors">
 					</div>
-					<div class="col-md-4">
-						<label for="number-of-basements">The number of basements contained in the building</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-basements">
+					<div>
+						<label>The number of basements contained in the building</label>
+						<input required type="text" id="number-of-basements">
 					</div>
-					<div class="col-md-4">
-						<label for="number-of-companies">The number of distinct businesses.</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-companies">
+					<div>
+						<label>The number of distinct businesses.</label>
+						<input required type="text" id="number-of-companies">
 					</div>
-					<div class="col-md-4">
-						<label for="numbber-of-parking-spots">The number of parking space available</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-parking-spots">
+					<div>
+						<label>The number of parking space available</label>
+						<input required type="text" id="number-of-parking-spots">
 					</div>
-					<div class="col-md-4">
-						<label for="number-of-elevators">The number of elevator cages to be deployed</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-elevators">
+					<div>
+						<label>The number of elevator cages to be deployed</label>
+						<input required type="text" id="number-of-elevators">
 					</div>
-					<div class="col-md-4">
-						<label for="number-of-corporations">The number of separate tenant companies</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="number-of-corporations">
+					<div>
+						<label>The number of separate tenant companies</label>
+						<input required type="text" id="number-of-corporations">
 					</div>
-					<div class="col-md-4">
-						<label for="maximum-occupancy">The maximum number of occupants per floor</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="maximum-occupancy">
+					<div>
+						<label>The maximum number of occupants per floor</label>
+						<input required type="text" id="maximum-occupancy">
 					</div>
-					<div class="col-md-4">
-						<label for="buisness-hours">The number of hours of activity of the building (the maximum being 24)</label>
-						<input required type="text" value="" class="form-control" name="contact[name][required]" id="buisness-hours">
+					<div>
+						<label>The number of hours of activity of the building (the maximum being 24)</label>
+						<input required type="text" id="buisness-hours">
 					</div>
+				</div>	
 			<p>Quality of elevator services</p>
 			<div class="col-md-4">
 				<label for="number-of-apartments">Standard</label>
@@ -508,6 +511,7 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
+		<script src="assets/js/Quote.js"></script>
 		
 
 		<!-- REVOLUTION SLIDER -->

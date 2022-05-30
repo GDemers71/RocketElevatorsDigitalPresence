@@ -1,11 +1,17 @@
-/**	CONTACT FORM
+/**	QUOTE FORM
 *************************************************** **/
-var _hash = window.location.hash;
-
-/**
-	BROWSER HASH - from php/contact.php redirect!
-
-	#alert_success 		= email sent
-	#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-	#alert_mandatory	= email not sent - required fields empty
-**/	jQuery(_hash).show();
+$(function () {
+	$("input[name='building-type']").click(function () {
+		if ($("#residential").is(":checked")) {
+			$("#number-of-apartments").show();
+			$("#number-of-floors").show();
+			$("#number-of-basements").show();
+			$("#number-of-companies").hide();
+			$("#number-of-parking-spots").hide();
+			$("#number-of-elevators").hide();
+			$("#number-of-corporations").hide();
+			$("#maximum-occupancy").hide();
+			$("#buisness-hours").hide();
+		}
+	});
+});
