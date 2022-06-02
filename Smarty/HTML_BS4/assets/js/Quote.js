@@ -2,53 +2,49 @@
  *************************************************** **/
 //hide & show des field selon type de building
 
+// This is the fonction for the commercial section
 function commercialFunction() {
-  $("input").keyup(function () {
+
+
+  $("input").change(function () {
+
     var numberOfElevators = $("#number-of-elevators-to-be-deployed").val();
-    var totalElevators = $("#input-elevator-amount");
-    // console.log("numberOfElevator is :", numberOfElevators);
+    
+    $("#input-elevator-amount").val(numberOfElevators)
+   
+    var commercialElevatorUnitPrice = $("#elevator-unit-price").val();
+    
+    var commercialTotalPrice = numberOfElevators * commercialElevatorUnitPrice;
 
-    totalElevators.val(numberOfElevators);
-
-    console.log(
-      "number-of-elevators-to-be-deployed is " +
-        numberOfElevators +
-        "input-elevator-amount is " +
-        totalElevators.val()
-    );
-
-    var elevatorAmount = $("#input-elevator-amount").val();
-    var elevatorUnitPrice = $("#elevator-unit-price").val();
-    console.log("input-elevator-amount is " + elevatorAmount + "and elevatorUnitPrice is " + elevatorUnitPrice
-    );
-    var total = elevatorAmount * elevatorUnitPrice;
-
-    $("#elevator-total-price").val(Math.round(total));
+    $("#elevator-total-price").val(commercialTotalPrice);
 
     if ($("#Standard").is(":checked")) {
       $("#elevator-unit-price").val(7565);
       var installationFees = 0.1;
-      var totalFees = installationFees * residentialTotal;
+      var totalFees = installationFees * commercialTotalPrice;
       $("#installation-fees").val(totalFees);
     }
     if ($("#Premium").is(":checked")) {
       $("#elevator-unit-price").val(12345);
       var installationFees = 0.13;
-      var totalFees = installationFees * residentialTotal;
+      var totalFees = installationFees * commercialTotalPrice;
       $("#installation-fees").val(totalFees);
     }
     if ($("#Excelium").is(":checked")) {
       $("#elevator-unit-price").val(15400);
       var installationFees = 0.16;
-      var totalFees = installationFees * residentialTotal;
+      var totalFees = installationFees * commercialTotalPrice;
       $("#installation-fees").val(totalFees);
       console.log("totalFees is " + totalFees);
         console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
     }
-    // $("#input-elevator-amount").val();
+    
+    $("#final-price").val(+totalFees + +commercialTotalPrice)
+
   });
 }
 
+// This is the fonction for the commercial section
 function residentialFunction() {
   var residentialElevatorUnitPrice = 0;
   
@@ -57,22 +53,22 @@ function residentialFunction() {
     var apartmentsNumber = $("#number-total-of-apartments").val();
 
     var floorsNumber = $("#number-total-of-floors").val();
-      console.log(" apartmentsNumber is " + apartmentsNumber + " floorsNumber is " + floorsNumber);
+      // console.log(" apartmentsNumber is " + apartmentsNumber + " floorsNumber is " + floorsNumber);
 
     var elevatorColumnNumber = Math.ceil(floorsNumber / 20);
-      console.log("elevatorColumnNumber is " + elevatorColumnNumber)
+      // console.log("elevatorColumnNumber is " + elevatorColumnNumber)
 
     var residentialNumberOfElevators = Math.ceil(apartmentsNumber / floorsNumber / 6);
-      console.log("residentialNumberOfElevatorsr is " + residentialNumberOfElevators)
+      // console.log("residentialNumberOfElevatorsr is " + residentialNumberOfElevators)
 
     var finalAmountOfResidentialElevators = residentialNumberOfElevators * elevatorColumnNumber;
     $("#input-elevator-amount").val(finalAmountOfResidentialElevators);
 
     residentialElevatorUnitPrice = $("#elevator-unit-price").val()
-      console.log("residentialElevatorUnitPrice is " + residentialElevatorUnitPrice)
+      // console.log("residentialElevatorUnitPrice is " + residentialElevatorUnitPrice)
 
     var residentialTotal = finalAmountOfResidentialElevators * residentialElevatorUnitPrice;
-      console.log("residentialTotal is " + residentialTotal)
+      // console.log("residentialTotal is " + residentialTotal)
 
     $("#elevator-total-price").val(residentialTotal);
 
@@ -93,8 +89,8 @@ function residentialFunction() {
         var installationFees = 0.16;
         var totalFees = installationFees * residentialTotal;
         $("#installation-fees").val(totalFees);
-        console.log("totalFees is " + totalFees);
-          console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
+          // console.log("totalFees is " + totalFees);
+          // console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
       }
 
     $("#final-price").val(+totalFees + +residentialTotal)
@@ -102,12 +98,74 @@ function residentialFunction() {
     });
   };
 
-
+// This fonction is for coporate and hybrid section
 function hybridAndCorporate(){
-  var totalNumberOfFloors = $
+
+  $("input").change(function () {
+
+  var numberOfFloors = $("#number-total-of-floors").val();
+    console.log("numberOfFloors is " + numberOfFloors);
+
+  var numberOfBasements = $("#number-total-of-basements").val();
+    console.log("numberOfBasements is " + numberOfBasements)
+
+  var numberOfOccupantsPerFloor = $("#Number-Of-occupants-per-floor").val();
+    console.log("numberOfoccupantsPerFloor is " + numberOfOccupantsPerFloor)
+
+  var numberTotalOfFloors = +numberOfFloors + +numberOfBasements;
+    console.log("numberTotalOfFloors is " + numberTotalOfFloors)
+
+  var numberTotalOfOccupants = numberOfOccupantsPerFloor * numberTotalOfFloors;
+    console.log("numberTotalOfOccupants is " + numberTotalOfOccupants)
+
+  var numberOfElevatorsRequired = numberTotalOfOccupants / 1000;
+    console.log("numberOfElevatorsRequired is " + numberOfElevatorsRequired)
+
+  var numberOfElevatorColumns = Math.ceil(numberTotalOfFloors / 20);
+    console.log("numberOfElevatorColumns is " + numberOfElevatorColumns)
+
+  var numberOfElevatorsPerColumn = Math.ceil(numberOfElevatorsRequired / numberOfElevatorColumns);
+    console.log("numberOfElevatorsPerColumn is " + numberOfElevatorsPerColumn)
+
+  var numberTotalOfElevator = numberOfElevatorsPerColumn / numberOfElevatorsRequired;
+    console.log("numberTotalOfElevator is " + numberTotalOfElevator)
+
+  $("#input-elevator-amount").val(numberTotalOfElevator);
+
+  var CorporateAndHybridUnitPrice = $("#elevator-unit-price").val();
+
+  var coporateAndHybridTotalPrice = CorporateAndHybridUnitPrice * numberTotalOfElevator
+  $("#elevator-total-price").val(coporateAndHybridTotalPrice);
+
+  if ($("#Standard").is(":checked")) {
+    $("#elevator-unit-price").val(7565);
+    var installationFees = 0.1;
+    var totalFees = installationFees * coporateAndHybridTotalPrice;
+    $("#installation-fees").val(totalFees);
+  }
+  if ($("#Premium").is(":checked")) {
+    $("#elevator-unit-price").val(12345);
+    var installationFees = 0.13;
+    var totalFees = installationFees * coporateAndHybridTotalPrice;
+    $("#installation-fees").val(totalFees);
+  }
+  if ($("#Excelium").is(":checked")) {
+    $("#elevator-unit-price").val(15400);
+    var installationFees = 0.16;
+    var totalFees = installationFees * coporateAndHybridTotalPrice;
+    $("#installation-fees").val(totalFees);
+    console.log("totalFees is " + totalFees);
+      console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
+  }
+
+  $("#final-price").val(+totalFees + +coporateAndHybridTotalPrice)
   
-  var totalNumberOfoccupants = $("#Number-Of-occupants-per-floor").val()
-}
+
+
+});
+};
+
+
 
 
 
@@ -149,6 +207,7 @@ $(function () {
       $("#number-of-corporations").show();
       $("#maximum-occupancy").show();
       $("#buisness-hours").hide();
+      hybridAndCorporate();
     }
     if ($("#hybrid").is(":checked")) {
       $("#number-of-apartments").hide();
@@ -160,30 +219,31 @@ $(function () {
       $("#number-of-corporations").hide();
       $("#maximum-occupancy").show();
       $("#buisness-hours").show();
+      hybridAndCorporate();
     }
   });
 
-  $("input[name='quality-of-elevator']").click(function () {
-    if ($("#Standard").is(":checked")) {
-      $("#elevator-unit-price").val(7565);
-      var installationFees = 0.1;
-      var totalFees = installationFees * $("#elevator-total-price").val();
-      $("#installation-fees").val(totalFees);
-    }
-    if ($("#Premium").is(":checked")) {
-      $("#elevator-unit-price").val(12345);
-      var installationFees = 0.13;
-      var totalFees = installationFees * $("#elevator-total-price").val();
-      $("#installation-fees").val(totalFees);
-    }
-    if ($("#Excelium").is(":checked")) {
-      $("#elevator-unit-price").val(15400);
-      var installationFees = 0.16;
-      var totalFees = installationFees * $("#elevator-total-price").val();
-      $("#installation-fees").val(totalFees);
-        console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
-    }
-  });
+  // $("input[name='quality-of-elevator']").click(function () {
+  //   if ($("#Standard").is(":checked")) {
+  //     $("#elevator-unit-price").val(7565);
+  //     var installationFees = 0.1;
+  //     var totalFees = installationFees * $("#elevator-total-price").val();
+  //     $("#installation-fees").val(totalFees);
+  //   }
+  //   if ($("#Premium").is(":checked")) {
+  //     $("#elevator-unit-price").val(12345);
+  //     var installationFees = 0.13;
+  //     var totalFees = installationFees * $("#elevator-total-price").val();
+  //     $("#installation-fees").val(totalFees);
+  //   }
+  //   if ($("#Excelium").is(":checked")) {
+  //     $("#elevator-unit-price").val(15400);
+  //     var installationFees = 0.16;
+  //     var totalFees = installationFees * $("#elevator-total-price").val();
+  //     $("#installation-fees").val(totalFees);
+  //       console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
+  //   }
+  // });
   
 
 
