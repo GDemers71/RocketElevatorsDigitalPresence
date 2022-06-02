@@ -176,11 +176,11 @@
 				<div>
 					<div id="number-of-apartments">
 						<label>The number of apartments in the building</label>
-						<input required type="text" class="fields">
+						<input required type="text" class="fields" id="number-total-of-apartments">
 					</div>
 					<div id="number-of-floors">
 						<label>The number of floors contained in the building, excluding basements</label>
-						<input required type="text" class="fields">
+						<input required type="text" class="fields" id="number-total-of-floors">
 					</div>
 					<div id="number-of-basements">
 						<label>The number of basements contained in the building</label>
@@ -196,7 +196,7 @@
 					</div>
 					<div id="number-of-elevators">
 						<label>The number of elevator cages to be deployed</label>
-						<input required type="text" class="fields" id="number-of-elevators-to-be-deployed" placeholder="0">
+						<input required type="text" class="fields" value="0" id="number-of-elevators-to-be-deployed" placeholder="0">
 					</div>
 					<div id="number-of-corporations">
 						<label>The number of separate tenant companies</label>
@@ -204,7 +204,7 @@
 					</div>
 					<div id="maximum-occupancy">
 						<label>The maximum number of occupants per floor</label>
-						<input required type="text" class="fields">
+						<input required type="text" class="fields" id="Number-Of-occupants-per-floor">
 					</div>
 					<div id="buisness-hours">
 						<label>The number of hours of activity of the building (the maximum being 24)</label>
@@ -227,29 +227,29 @@
 			</div>	 
 			<div >
 				<label for="elevator-unit-price"></label>
-				The unit price of each elevator <input type="text" id="elevator-unit-price" value="10" readonly>
+				The unit price of each elevator <input type="text" value="" id="elevator-unit-price" readonly>
 			</div>
 		</UL>	
 		<div>
 			<p>estimated project price</p>
 			<div id="elevator-amount">
 				<label for="elevator-amount">The amount of elevators needed</label>
-				<input required type="text" value="" name="contact[name][required]" id="input-elevator-amount" placeholder="total amount">
+				<input required type="text" value="0" id="input-elevator-amount" placeholder="total amount">
 			</div>
 			
 			<div>
 				<label for="elevator-total-price">The total price of the elevators</label>
-				<input required type="text" value=""  name="contact[name][required]" readonly id="elevator-total-price" placeholder="Total price">
+				<input required type="text" value=""  readonly id="elevator-total-price" placeholder="Total price">
 			</div>
 
 			<div>
 				<label for="installation-fees">The installation fees</label>
-				<input required type="text" value="1234" class="form-control" name="contact[name][required]"  id="installation-fees"  readonly placeholder="installation fees">
+				<input required type="text" value=""  id="installation-fees"  readonly placeholder="installation fees">
 			</div>
 
 			<div>
 				<label for="final-price">final price</label>
-				<input required type="text" value="" class="form-control" name="contact[name][required]"  id="final-price"  readonlyplaceholder="final price">
+				<input required type="text" value=""  id="final-price"  readonly placeholder="final price">
 			</div>
 		</div>
 	
