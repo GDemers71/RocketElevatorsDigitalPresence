@@ -11,6 +11,7 @@ function commercialFunction() {
   
   var unitPrice = 0;
 
+  var comercialFinalPrice = 0;
   $("input , :radio").change(function () {
 
     var numberOfElevators = $("#number-of-elevators-to-be-deployed").val();
@@ -28,7 +29,7 @@ function commercialFunction() {
     
   }
     if ($("#Excelium").is(":checked")) {
-    $("#elevator-unit-price").val(15400);
+    unitPrice = 15400;
     installationFees = 0.16;
 
     console.log("totalFees is " + totalFees);
@@ -41,13 +42,15 @@ function commercialFunction() {
 
     var commercialTotalPrice = numberOfElevators * commercialElevatorUnitPrice;
 
-    $("#elevator-total-price").val(commercialTotalPrice);
+    $("#elevator-total-price").val(commercialTotalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
     totalFees = installationFees * commercialTotalPrice;
 
-    $("#installation-fees").val(totalFees);
+    $("#installation-fees").val(totalFees.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
-    $("#final-price").val(+totalFees + +commercialTotalPrice)
+    comercialFinalPrice = +totalFees + +commercialTotalPrice
+
+    $("#final-price").val(comercialFinalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
   });
 }
@@ -57,6 +60,8 @@ function residentialFunction() {
   var residentialElevatorUnitPrice = 0;
   var installationFees = 0;
   var totalFees = 0;
+  var residentialFinalprice = 0;
+  var unitPrice = 0;
   $("input").change(function () {
     
     var apartmentsNumber = $("#number-total-of-apartments").val();
@@ -76,25 +81,26 @@ function residentialFunction() {
     
 
       if ($("#Standard").is(":checked")) {
-        $("#elevator-unit-price").val(7565);
+        unitPrice = 7565;
         installationFees = 0.1;
         
       
       }
       if ($("#Premium").is(":checked")) {
-        $("#elevator-unit-price").val(12345);
+        unitPrice = 12345;
         installationFees = 0.13;
         
        
       }
       if ($("#Excelium").is(":checked")) {
-        $("#elevator-unit-price").val(15400);
+        unitPrice = 15400;
         installationFees = 0.16;
      
         
           // console.log("totalFees is " + totalFees);
           // console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
       }
+      $("#elevator-unit-price").val(unitPrice);
 
       residentialElevatorUnitPrice = $("#elevator-unit-price").val()
       // console.log("residentialElevatorUnitPrice is " + residentialElevatorUnitPrice)
@@ -102,13 +108,15 @@ function residentialFunction() {
       var residentialTotal = finalAmountOfResidentialElevators * residentialElevatorUnitPrice;
       // console.log("residentialTotal is " + residentialTotal)
 
-    $("#elevator-total-price").val(residentialTotal);
+    $("#elevator-total-price").val(residentialTotal.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
     totalFees = installationFees * residentialTotal;
 
-    $("#installation-fees").val(totalFees);
+    $("#installation-fees").val(totalFees.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
-    $("#final-price").val(+totalFees + +residentialTotal)
+    residentialFinalprice = +totalFees + +residentialTotal
+
+    $("#final-price").val(residentialFinalprice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $")
       
     });
   };
@@ -117,6 +125,7 @@ function residentialFunction() {
 function hybridAndCorporate(){
   var totalFees = 0;
   var installationFees = 0;
+  var unitPrice = 0;
   $("input").change(function () {
 
   var numberOfFloors = $("#number-total-of-floors").val();
@@ -150,34 +159,38 @@ function hybridAndCorporate(){
 
 
   if ($("#Standard").is(":checked")) {
-    $("#elevator-unit-price").val(7565);
+    unitPrice = 7565;
     installationFees = 0.1;
     
   }
   if ($("#Premium").is(":checked")) {
-    $("#elevator-unit-price").val(12345);
+    unitPrice = 12345;
     installationFees = 0.13;
     
   }
   if ($("#Excelium").is(":checked")) {
-    $("#elevator-unit-price").val(15400);
+    unitPrice = 15400;
     installationFees = 0.16;  
 
     console.log("totalFees is " + totalFees);
       console.log("elevator-unit-price is" + $("#elevator-unit-price").val())
   }
 
+  $("#elevator-unit-price").val(unitPrice);
+
   var CorporateAndHybridUnitPrice = $("#elevator-unit-price").val();
 
   var coporateAndHybridTotalPrice = CorporateAndHybridUnitPrice * numberTotalOfElevator
 
-  $("#elevator-total-price").val(coporateAndHybridTotalPrice);
+  $("#elevator-total-price").val(coporateAndHybridTotalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
   totalFees = installationFees * coporateAndHybridTotalPrice;
 
-  $("#installation-fees").val(totalFees);
+  $("#installation-fees").val(totalFees.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $");
 
-  $("#final-price").val(+totalFees + +coporateAndHybridTotalPrice)
+  corporateAndHybridFinalPrice = +totalFees + +coporateAndHybridTotalPrice
+
+  $("#final-price").val(corporateAndHybridFinalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " $")
   
 
 
